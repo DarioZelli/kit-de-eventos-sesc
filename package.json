@@ -1,0 +1,9 @@
+{
+  "name": "kit-de-eventos-sesc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kit modular para eventos SESC",
+  "scripts": {
+    "test": "echo 'Sem testes automatizados na raiz'"
+  }
+}

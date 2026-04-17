@@ -1,0 +1,41 @@
+@media (max-width: 900px) {
+  .site-nav { display: none; }
+  .site-nav.aberto {
+    display: block;
+    position: absolute;
+    top: var(--altura-header);
+    left: 0;
+    right: 0;
+    background: var(--cor-primaria-escuro);
+    padding: var(--espaco-md);
+  }
+  .site-nav.aberto ul { flex-direction: column; gap: var(--espaco-sm); }
+  .menu-toggle { display: block; }
+  .hero h1 { font-size: 2rem; }
+  .hero-info { gap: var(--espaco-lg); }
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-marca { grid-column: 1 / -1; }
+  .metricas-grid { grid-template-columns: 1fr 1fr; }
+  .dashboard-layout { grid-template-columns: 1fr; }
+  .dashboard-sidebar { position: static; height: auto; display: none; }
+  .info-local { grid-template-columns: 1fr; }
+  .form-grid-2 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.7rem; }
+  .hero p { font-size: 1rem; }
+  .hero-acoes { flex-direction: column; }
+  .titulo-secao { font-size: 1.4rem; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+  .bloco-horario { grid-template-columns: 80px 1fr; gap: var(--espaco-md); }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .metricas-grid { grid-template-columns: 1fr 1fr; }
+  .tabs-dia { overflow-x: auto; }
+}
+
