@@ -1,4 +1,53 @@
 :root {
+  /* Cores */
   --cor-primaria: #0055a5;
-  --cor-texto: #222;
+  --cor-primaria-escuro: #003d7a;
+  --cor-primaria-claro: #e8f0fb;
+  --cor-destaque: #f0a500;
+  --cor-destaque-claro: #fff8e6;
+  --cor-sucesso: #2e7d32;
+  --cor-erro: #c62828;
+  --cor-fundo: #f5f7fa;
+  --cor-fundo-card: #ffffff;
+  --cor-borda: #dde3ec;
+  --cor-texto: #1a1a2e;
+  --cor-texto-secundario: #4a5568;
+  --cor-texto-invertido: #ffffff;
+
+  /* Tipografia */
+  --fonte-principal: 'Segoe UI', Arial, sans-serif;
+  --tamanho-base: 16px;
+  --escala-h1: 2.5rem;
+  --escala-h2: 1.8rem;
+  --escala-h3: 1.25rem;
+  --escala-corpo: 1rem;
+  --escala-pequeno: 0.875rem;
+
+  /* Espaçamento */
+  --espaco-xs: 4px;
+  --espaco-sm: 8px;
+  --espaco-md: 16px;
+  --espaco-lg: 24px;
+  --espaco-xl: 40px;
+  --espaco-2xl: 64px;
+
+  /* Bordas */
+  --raio-sm: 4px;
+  --raio-md: 8px;
+  --raio-lg: 16px;
+  --raio-pill: 100px;
+
+  /* Sombras */
+  --sombra-sm: 0 1px 4px rgba(0,0,0,0.08);
+  --sombra-md: 0 4px 12px rgba(0,0,0,0.12);
+  --sombra-lg: 0 8px 24px rgba(0,0,0,0.16);
+
+  /* Transições */
+  --transicao: 0.2s ease;
+
+  /* Largura máxima */
+  --max-largura: 1100px;
+
+  /* Altura do header */
+  --altura-header: 64px;
 }
