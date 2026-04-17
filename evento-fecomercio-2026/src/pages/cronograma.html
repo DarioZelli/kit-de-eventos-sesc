@@ -3,14 +3,227 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>cronograma | Fecomércio 2026</title>
+  <title>Cronograma — Fecomércio 2026</title>
   <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="header-logo">📋 <strong>SESC</strong> <span>Kit de Eventos</span></a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cronograma.html" class="ativo">Cronograma</a></li>
+          <li><a href="palestrantes.html">Palestrantes</a></li>
+          <li><a href="local-mapa.html">Local</a></li>
+          <li><a href="patrocinadores.html">Patrocinadores</a></li>
+          <li><a href="inscricoes.html" class="btn-inscricao">Inscreva-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <h1>Fecomércio 2026</h1>
-    <p>Página: cronograma</p>
+    <div class="page-header">
+      <div class="container">
+        <div class="page-breadcrumb"><a href="index.html">Início</a> <span>/</span> Cronograma</div>
+        <h1>📅 Programação</h1>
+        <p>Três dias repletos de conteúdo, palestras e networking.</p>
+      </div>
+    </div>
+
+    <section class="secao">
+      <div class="container">
+        <div class="tabs-dia">
+          <button class="tab-btn ativo" onclick="mostrarDia('dia1', this)">Dia 1 — 15/out</button>
+          <button class="tab-btn" onclick="mostrarDia('dia2', this)">Dia 2 — 16/out</button>
+          <button class="tab-btn" onclick="mostrarDia('dia3', this)">Dia 3 — 17/out</button>
+        </div>
+
+        <div id="dia1" class="tab-conteudo ativo">
+          <div class="cronograma-grid">
+            <div class="bloco-horario">
+              <div class="horario-label">08h00</div>
+              <div class="atividade-card tipo-abertura">
+                <div class="atividade-titulo">☀️ Credenciamento e Café de Boas-vindas</div>
+                <div class="atividade-palestrante">Equipe de organização</div>
+                <div class="atividade-meta"><span class="badge badge-sucesso">Abertura</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">09h00</div>
+              <div class="atividade-card tipo-abertura">
+                <div class="atividade-titulo">🎉 Cerimônia de Abertura Oficial</div>
+                <div class="atividade-palestrante">Diretoria SESC e Fecomércio</div>
+                <div class="atividade-meta"><span class="badge badge-sucesso">Abertura</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">10h00</div>
+              <div class="atividade-card tipo-palestra">
+                <div class="atividade-titulo">O Futuro do Comércio Brasileiro em 2026</div>
+                <div class="atividade-palestrante">Dr. Marcos Andrade — Economista-Chefe, FGV</div>
+                <div class="atividade-meta"><span class="badge badge-primario">Palestra Magna</span><span class="badge" style="background:#f3e5f5;color:#6a1b9a">Auditório Principal</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">12h00</div>
+              <div class="atividade-card tipo-pausa">
+                <div class="atividade-titulo">🍽️ Almoço de Networking</div>
+                <div class="atividade-meta"><span class="badge badge-destaque">Intervalo</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">14h00</div>
+              <div class="atividade-card tipo-palestra">
+                <div class="atividade-titulo">Transformação Digital no Varejo: Cases Reais</div>
+                <div class="atividade-palestrante">Ana Beatriz Santos — Diretora de Inovação, Magazine Luiza</div>
+                <div class="atividade-meta"><span class="badge badge-primario">Palestra</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">16h00</div>
+              <div class="atividade-card tipo-palestra">
+                <div class="atividade-titulo">Gestão de Equipes de Alta Performance</div>
+                <div class="atividade-palestrante">Prof. Ricardo Oliveira — HSM Management</div>
+                <div class="atividade-meta"><span class="badge badge-primario">Palestra</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">18h00</div>
+              <div class="atividade-card tipo-encerramento">
+                <div class="atividade-titulo">🍷 Coquetel de Networking</div>
+                <div class="atividade-meta"><span class="badge" style="background:#f3e5f5;color:#6a1b9a">Encerramento do dia</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="dia2" class="tab-conteudo">
+          <div class="cronograma-grid">
+            <div class="bloco-horario">
+              <div class="horario-label">08h30</div>
+              <div class="atividade-card tipo-pausa">
+                <div class="atividade-titulo">☕ Café da Manhã</div>
+                <div class="atividade-meta"><span class="badge badge-destaque">Intervalo</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">09h00</div>
+              <div class="atividade-card tipo-palestra">
+                <div class="atividade-titulo">ESG no Comércio: Responsabilidade e Competitividade</div>
+                <div class="atividade-palestrante">Dra. Carla Mendonça — Consultora ESG</div>
+                <div class="atividade-meta"><span class="badge badge-primario">Palestra</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">11h00</div>
+              <div class="atividade-card tipo-palestra">
+                <div class="atividade-titulo">Inteligência Artificial: Oportunidades para o Varejo</div>
+                <div class="atividade-palestrante">Felipe Torres — Head de IA, TOTVS</div>
+                <div class="atividade-meta"><span class="badge badge-primario">Palestra</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">12h30</div>
+              <div class="atividade-card tipo-pausa">
+                <div class="atividade-titulo">🍽️ Almoço</div>
+                <div class="atividade-meta"><span class="badge badge-destaque">Intervalo</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">14h00</div>
+              <div class="atividade-card tipo-palestra">
+                <div class="atividade-titulo">Painel: O Crédito como Motor do Crescimento</div>
+                <div class="atividade-palestrante">Moderação: Fecomércio SP</div>
+                <div class="atividade-meta"><span class="badge badge-primario">Painel</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">16h00</div>
+              <div class="atividade-card tipo-palestra">
+                <div class="atividade-titulo">Marketing para o Novo Consumidor Digital</div>
+                <div class="atividade-palestrante">Gabriela Lima — CMO, RD Station</div>
+                <div class="atividade-meta"><span class="badge badge-primario">Palestra</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="dia3" class="tab-conteudo">
+          <div class="cronograma-grid">
+            <div class="bloco-horario">
+              <div class="horario-label">08h30</div>
+              <div class="atividade-card tipo-pausa">
+                <div class="atividade-titulo">☕ Café da Manhã</div>
+                <div class="atividade-meta"><span class="badge badge-destaque">Intervalo</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">09h00</div>
+              <div class="atividade-card tipo-palestra">
+                <div class="atividade-titulo">Liderança e Propósito: Como Inspirar Times em Tempos de Mudança</div>
+                <div class="atividade-palestrante">Paulo Vieira — Escritor e Palestrante</div>
+                <div class="atividade-meta"><span class="badge badge-primario">Palestra Magna</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">11h00</div>
+              <div class="atividade-card tipo-palestra">
+                <div class="atividade-titulo">Tendências de Consumo 2027–2030</div>
+                <div class="atividade-palestrante">Instituto de Pesquisa Fecomércio</div>
+                <div class="atividade-meta"><span class="badge badge-primario">Apresentação</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">12h30</div>
+              <div class="atividade-card tipo-pausa">
+                <div class="atividade-titulo">🍽️ Almoço de Encerramento</div>
+                <div class="atividade-meta"><span class="badge badge-destaque">Intervalo</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">14h00</div>
+              <div class="atividade-card tipo-palestra">
+                <div class="atividade-titulo">Workshop: Planejamento Estratégico para 2027</div>
+                <div class="atividade-palestrante">Facilitação: Consultores SESC</div>
+                <div class="atividade-meta"><span class="badge badge-primario">Workshop</span></div>
+              </div>
+            </div>
+            <div class="bloco-horario">
+              <div class="horario-label">17h00</div>
+              <div class="atividade-card tipo-encerramento">
+                <div class="atividade-titulo">🏆 Premiação e Cerimônia de Encerramento</div>
+                <div class="atividade-palestrante">Diretoria SESC e Fecomércio</div>
+                <div class="atividade-meta"><span class="badge" style="background:#f3e5f5;color:#6a1b9a">Encerramento</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <script src="../scripts/app.js"></script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 SESC — Fecomércio. Todos os direitos reservados.</span>
+        <a href="index.html" style="color:rgba(255,255,255,0.6)">← Voltar ao início</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function mostrarDia(id, btn) {
+      document.querySelectorAll('.tab-conteudo').forEach(function(el) { el.classList.remove('ativo'); });
+      document.querySelectorAll('.tab-btn').forEach(function(el) { el.classList.remove('ativo'); });
+      document.getElementById(id).classList.add('ativo');
+      btn.classList.add('ativo');
+    }
+  </script>
+  <script src="../scripts/config.js"></script>
 </body>
 </html>
