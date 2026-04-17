@@ -3,14 +3,142 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>inscricoes | Fecomércio 2026</title>
+  <title>Inscrições — Fecomércio 2026</title>
   <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="header-logo">📋 <strong>SESC</strong> <span>Kit de Eventos</span></a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cronograma.html">Cronograma</a></li>
+          <li><a href="palestrantes.html">Palestrantes</a></li>
+          <li><a href="local-mapa.html">Local</a></li>
+          <li><a href="patrocinadores.html">Patrocinadores</a></li>
+          <li><a href="inscricoes.html" class="btn-inscricao ativo">Inscreva-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <h1>Fecomércio 2026</h1>
-    <p>Página: inscricoes</p>
+    <div class="page-header">
+      <div class="container">
+        <div class="page-breadcrumb"><a href="index.html">Início</a> <span>/</span> Inscrições</div>
+        <h1>🎟️ Inscrições</h1>
+        <p>Garanta sua participação no Fecomércio 2026. Vagas limitadas!</p>
+      </div>
+    </div>
+
+    <section class="secao">
+      <div class="container">
+        <div id="form-container" class="form-card">
+          <h2 class="form-titulo">Formulário de Inscrição</h2>
+          <p class="form-subtitulo">Preencha os dados abaixo. Você receberá a confirmação por e-mail.</p>
+
+          <form id="form-inscricao" onsubmit="enviarInscricao(event)">
+            <div class="form-grid-2">
+              <div class="form-grupo">
+                <label for="nome">Nome completo *</label>
+                <input type="text" id="nome" class="form-controle" placeholder="Seu nome completo" required>
+              </div>
+              <div class="form-grupo">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" class="form-controle" placeholder="seu@email.com" required>
+              </div>
+              <div class="form-grupo">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" class="form-controle" placeholder="(11) 99999-9999">
+              </div>
+              <div class="form-grupo">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" class="form-controle" placeholder="Nome da empresa">
+              </div>
+              <div class="form-grupo">
+                <label for="cargo">Cargo</label>
+                <input type="text" id="cargo" class="form-controle" placeholder="Seu cargo">
+              </div>
+              <div class="form-grupo">
+                <label for="cidade">Cidade / Estado</label>
+                <input type="text" id="cidade" class="form-controle" placeholder="Ex: São Paulo – SP">
+              </div>
+
+              <div class="form-grupo form-grupo-full">
+                <label>Tipo de ingresso</label>
+                <div class="opcoes-ingresso">
+                  <label class="ingresso-opcao">
+                    <input type="radio" name="ingresso" value="padrao" checked>
+                    <div class="ingresso-info">
+                      <div class="ingresso-nome">Ingresso Padrão</div>
+                      <div class="ingresso-descricao">Acesso aos três dias de evento, coffee breaks e materiais.</div>
+                    </div>
+                    <div class="ingresso-preco">Gratuito</div>
+                  </label>
+                  <label class="ingresso-opcao">
+                    <input type="radio" name="ingresso" value="vip">
+                    <div class="ingresso-info">
+                      <div class="ingresso-nome">Ingresso VIP</div>
+                      <div class="ingresso-descricao">Ingresso Padrão + acesso a áreas exclusivas e jantar de gala.</div>
+                    </div>
+                    <div class="ingresso-preco">R$ 490</div>
+                  </label>
+                  <label class="ingresso-opcao">
+                    <input type="radio" name="ingresso" value="master">
+                    <div class="ingresso-info">
+                      <div class="ingresso-nome">Ingresso Master</div>
+                      <div class="ingresso-descricao">VIP + workshop exclusivo + encontro com palestrantes.</div>
+                    </div>
+                    <div class="ingresso-preco">R$ 990</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:var(--espaco-xl)">
+              <button type="submit" class="btn btn-primario btn-grande" style="width:100%;justify-content:center">
+                Confirmar inscrição
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div id="sucesso" class="form-card text-center" style="display:none">
+          <div style="font-size:3rem;margin-bottom:var(--espaco-md)">✅</div>
+          <h2>Inscrição realizada!</h2>
+          <p>Obrigado! Você receberá a confirmação no e-mail cadastrado em até 24 horas.</p>
+          <p><strong>📅 Data:</strong> 15 a 17 de outubro de 2026</p>
+          <p><strong>📍 Local:</strong> Centro de Convenções SESC, São Paulo – SP</p>
+          <a href="index.html" class="btn btn-primario" style="margin-top:var(--espaco-md)">Voltar ao início</a>
+        </div>
+      </div>
+    </section>
   </main>
-  <script src="../scripts/app.js"></script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 SESC — Fecomércio. Todos os direitos reservados.</span>
+        <a href="index.html" style="color:rgba(255,255,255,0.6)">← Voltar ao início</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/config.js"></script>
+  <script src="../scripts/validacao.js"></script>
+  <script>
+    function enviarInscricao(e) {
+      e.preventDefault();
+      var email = document.getElementById('email').value;
+      if (!window.validacao || window.validacao.email(email)) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('sucesso').style.display = 'block';
+      }
+    }
+  </script>
 </body>
 </html>

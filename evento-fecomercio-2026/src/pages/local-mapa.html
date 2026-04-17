@@ -3,14 +3,128 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>local-mapa | Fecomércio 2026</title>
+  <title>Local e Mapa — Fecomércio 2026</title>
   <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="header-logo">📋 <strong>SESC</strong> <span>Kit de Eventos</span></a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cronograma.html">Cronograma</a></li>
+          <li><a href="palestrantes.html">Palestrantes</a></li>
+          <li><a href="local-mapa.html" class="ativo">Local</a></li>
+          <li><a href="patrocinadores.html">Patrocinadores</a></li>
+          <li><a href="inscricoes.html" class="btn-inscricao">Inscreva-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <h1>Fecomércio 2026</h1>
-    <p>Página: local-mapa</p>
+    <div class="page-header">
+      <div class="container">
+        <div class="page-breadcrumb"><a href="index.html">Início</a> <span>/</span> Local e Mapa</div>
+        <h1>📍 Local do Evento</h1>
+        <p>Centro de Convenções SESC — São Paulo, SP</p>
+      </div>
+    </div>
+
+    <section class="secao">
+      <div class="container">
+        <div class="mapa-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197!2d-46.6333!3d-23.5505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sS%C3%A3o%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1"
+            width="100%" height="380" style="border:0;border-radius:var(--raio-lg)" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="info-local" style="margin-top:var(--espaco-xl)">
+          <div>
+            <h3 style="margin-bottom:var(--espaco-md)">📌 Endereço</h3>
+            <div class="card">
+              <p style="margin-bottom:var(--espaco-sm)"><strong>Centro de Convenções SESC</strong></p>
+              <p style="margin-bottom:var(--espaco-sm)">Av. Paulista, 119 — Bela Vista</p>
+              <p style="margin-bottom:var(--espaco-sm)">São Paulo – SP, CEP 01310-100</p>
+              <a href="https://maps.google.com/?q=Av.+Paulista,+119,+São+Paulo" target="_blank" rel="noopener" class="btn btn-outline btn-pequeno" style="margin-top:var(--espaco-sm)">
+                Abrir no Google Maps
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 style="margin-bottom:var(--espaco-md)">🚌 Como chegar</h3>
+            <div style="display:flex;flex-direction:column;gap:var(--espaco-md)">
+              <div class="como-chegar-item">
+                <div class="como-chegar-icone">🚇</div>
+                <div class="como-chegar-info">
+                  <h4>Metrô</h4>
+                  <p>Estação Trianon-MASP (Linha 2 – Verde), a 200m do local.</p>
+                </div>
+              </div>
+              <div class="como-chegar-item">
+                <div class="como-chegar-icone">🚌</div>
+                <div class="como-chegar-info">
+                  <h4>Ônibus</h4>
+                  <p>Diversas linhas pela Av. Paulista. Parada em frente ao local.</p>
+                </div>
+              </div>
+              <div class="como-chegar-item">
+                <div class="como-chegar-icone">🚗</div>
+                <div class="como-chegar-info">
+                  <h4>Carro</h4>
+                  <p>Estacionamento conveniado disponível. Acesso pela Alameda Santos.</p>
+                </div>
+              </div>
+              <div class="como-chegar-item">
+                <div class="como-chegar-icone">🚕</div>
+                <div class="como-chegar-info">
+                  <h4>Aplicativos</h4>
+                  <p>Uber, 99 e outros apps — referência: "SESC Av. Paulista".</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao-fundo-claro">
+      <div class="container">
+        <h2 class="titulo-secao text-center">🏨 Hotéis próximos</h2>
+        <p class="subtitulo-secao text-center">Sugestões de hospedagem a poucos minutos do local.</p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Hotel Maksoud Plaza</h3>
+            <p>A 5 min a pé. Categoria 5 estrelas. Tarifa especial para participantes do evento.</p>
+            <span class="badge badge-sucesso">Parceiro oficial</span>
+          </div>
+          <div class="card">
+            <h3>Ibis Paulista</h3>
+            <p>A 8 min a pé. Custo-benefício ideal. Reserve com antecedência.</p>
+          </div>
+          <div class="card">
+            <h3>Holiday Inn Express</h3>
+            <p>A 10 min a pé. Café da manhã incluso. Opção confortável e bem localizada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <script src="../scripts/app.js"></script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 SESC — Fecomércio. Todos os direitos reservados.</span>
+        <a href="index.html" style="color:rgba(255,255,255,0.6)">← Voltar ao início</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/config.js"></script>
 </body>
 </html>

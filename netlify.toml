@@ -1,6 +1,6 @@
 [build]
   base    = "evento-fecomercio-2026"
-  publish = "src/pages"
+  publish = "src"
 
 [[redirects]]
   from = "/"

@@ -3,14 +3,199 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>dashboard | Fecomércio 2026</title>
+  <title>Dashboard — Fecomércio 2026</title>
   <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="header-logo">📋 <strong>SESC</strong> <span>Gestão de Eventos</span></a>
+      <nav class="site-nav" id="nav-logado" style="display:none">
+        <ul>
+          <li><span style="color:rgba(255,255,255,0.7);font-size:0.85rem" id="nome-usuario"></span></li>
+          <li><button onclick="fazerLogout()" style="background:none;border:1px solid rgba(255,255,255,0.4);color:#fff;padding:4px 12px;border-radius:var(--raio-md);cursor:pointer;font-size:0.85rem">Sair</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <h1>Fecomércio 2026</h1>
-    <p>Página: dashboard</p>
+    <!-- TELA DE LOGIN -->
+    <div class="login-overlay" id="tela-login">
+      <div class="login-card">
+        <div style="font-size:2.5rem;margin-bottom:var(--espaco-md)">📋</div>
+        <h2>SESC — Gestão de Eventos</h2>
+        <p class="subtitulo">Acesse com seu e-mail e senha</p>
+
+        <form id="form-login" onsubmit="fazerLogin(event)">
+          <div class="form-grupo" style="text-align:left">
+            <label for="input-email">E-MAIL</label>
+            <input type="text" id="input-email" class="form-controle" placeholder="seu@email.com" autocomplete="username">
+          </div>
+          <div class="form-grupo" style="text-align:left">
+            <label for="input-senha">SENHA</label>
+            <input type="password" id="input-senha" class="form-controle" placeholder="••••••••" autocomplete="current-password">
+          </div>
+          <p id="msg-erro" style="color:var(--cor-erro);font-size:var(--escala-pequeno);display:none;margin-bottom:var(--espaco-md)">E-mail ou senha incorretos.</p>
+          <button type="submit" class="btn btn-primario" style="width:100%;justify-content:center">Entrar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- PAINEL ADMIN -->
+    <div id="painel-admin" style="display:none">
+      <div class="dashboard-layout">
+        <aside class="dashboard-sidebar">
+          <div class="sidebar-titulo">Menu</div>
+          <a href="#" class="sidebar-item ativo"><span>📊</span> Visão geral</a>
+          <a href="#" class="sidebar-item"><span>🎟️</span> Inscrições</a>
+          <a href="#" class="sidebar-item"><span>👤</span> Palestrantes</a>
+          <a href="#" class="sidebar-item"><span>📅</span> Cronograma</a>
+          <a href="#" class="sidebar-item"><span>🤝</span> Patrocinadores</a>
+          <a href="#" class="sidebar-item"><span>📧</span> Comunicação</a>
+          <div class="sidebar-titulo" style="margin-top:var(--espaco-xl)">Configurações</div>
+          <a href="index.html" class="sidebar-item"><span>🌐</span> Ver site público</a>
+          <a href="#" class="sidebar-item" onclick="fazerLogout()"><span>🚪</span> Sair</a>
+        </aside>
+
+        <div class="dashboard-conteudo">
+          <h1 class="dashboard-titulo">Visão Geral — Fecomércio 2026</h1>
+
+          <div class="metricas-grid">
+            <div class="metrica-card">
+              <div class="metrica-numero">347</div>
+              <div class="metrica-label">Inscrições realizadas</div>
+              <div class="metrica-variacao">↑ 12% esta semana</div>
+            </div>
+            <div class="metrica-card">
+              <div class="metrica-numero">153</div>
+              <div class="metrica-label">Vagas restantes</div>
+              <div class="metrica-variacao baixo">⚠️ Últimas vagas</div>
+            </div>
+            <div class="metrica-card">
+              <div class="metrica-numero">22</div>
+              <div class="metrica-label">Palestrantes confirmados</div>
+              <div class="metrica-variacao">↑ 2 novos</div>
+            </div>
+            <div class="metrica-card">
+              <div class="metrica-numero">18</div>
+              <div class="metrica-label">Patrocinadores</div>
+              <div class="metrica-variacao">✅ Meta atingida</div>
+            </div>
+          </div>
+
+          <div class="tabela-container">
+            <div class="tabela-header">
+              <strong>Últimas inscrições</strong>
+              <a href="inscricoes.html" class="btn btn-outline btn-pequeno">Ver página pública</a>
+            </div>
+            <table class="tabela">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>E-mail</th>
+                  <th>Empresa</th>
+                  <th>Ingresso</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ana Paula Mendes</td>
+                  <td>ana@empresa.com.br</td>
+                  <td>Grupo Varejo Sul</td>
+                  <td><span class="badge badge-primario">VIP</span></td>
+                  <td><span class="badge badge-sucesso">Confirmado</span></td>
+                </tr>
+                <tr>
+                  <td>Carlos Eduardo Lima</td>
+                  <td>carlos@atacado.com.br</td>
+                  <td>Atacado Lima</td>
+                  <td><span class="badge badge-destaque">Master</span></td>
+                  <td><span class="badge badge-sucesso">Confirmado</span></td>
+                </tr>
+                <tr>
+                  <td>Fernanda Costa</td>
+                  <td>fernanda@sesc.com.br</td>
+                  <td>SESC Regional</td>
+                  <td><span class="badge badge-primario">Padrão</span></td>
+                  <td><span class="badge badge-sucesso">Confirmado</span></td>
+                </tr>
+                <tr>
+                  <td>Roberto Alves</td>
+                  <td>roberto@comercio.com</td>
+                  <td>Comércio Alves</td>
+                  <td><span class="badge badge-primario">Padrão</span></td>
+                  <td><span class="badge" style="background:#fff3e0;color:#e65100">Aguardando</span></td>
+                </tr>
+                <tr>
+                  <td>Juliana Borges</td>
+                  <td>juliana@fecomercio.org</td>
+                  <td>Fecomércio</td>
+                  <td><span class="badge badge-destaque">Master</span></td>
+                  <td><span class="badge badge-sucesso">Confirmado</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
-  <script src="../scripts/app.js"></script>
+
+  <script src="../scripts/config.js"></script>
+  <script>
+    // Credenciais de acesso ao painel administrativo
+    var USUARIOS = [
+      { email: 'admin@sesc.com.br', senha: 'Sesc@2026', nome: 'Administrador' }
+    ];
+
+    function fazerLogin(e) {
+      e.preventDefault();
+      var email = document.getElementById('input-email').value.trim();
+      var senha = document.getElementById('input-senha').value;
+      var msgErro = document.getElementById('msg-erro');
+
+      var usuario = USUARIOS.find(function(u) {
+        return u.email === email && u.senha === senha;
+      });
+
+      if (usuario) {
+        msgErro.style.display = 'none';
+        sessionStorage.setItem('admin_logado', '1');
+        sessionStorage.setItem('admin_nome', usuario.nome);
+        mostrarPainel(usuario.nome);
+      } else {
+        msgErro.style.display = 'block';
+        document.getElementById('input-email').classList.add('erro');
+        document.getElementById('input-senha').classList.add('erro');
+      }
+    }
+
+    function mostrarPainel(nome) {
+      document.getElementById('tela-login').style.display = 'none';
+      document.getElementById('painel-admin').style.display = 'block';
+      document.getElementById('nav-logado').style.display = 'flex';
+      document.getElementById('nome-usuario').textContent = nome;
+    }
+
+    function fazerLogout() {
+      sessionStorage.removeItem('admin_logado');
+      sessionStorage.removeItem('admin_nome');
+      document.getElementById('tela-login').style.display = 'flex';
+      document.getElementById('painel-admin').style.display = 'none';
+      document.getElementById('nav-logado').style.display = 'none';
+      document.getElementById('input-email').value = '';
+      document.getElementById('input-senha').value = '';
+    }
+
+    // Verificar se já está logado na sessão atual
+    if (sessionStorage.getItem('admin_logado')) {
+      mostrarPainel(sessionStorage.getItem('admin_nome') || 'Administrador');
+    }
+  </script>
 </body>
 </html>

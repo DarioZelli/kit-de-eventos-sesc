@@ -3,14 +3,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>patrocinadores | Fecomércio 2026</title>
+  <title>Patrocinadores — Fecomércio 2026</title>
   <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="header-logo">📋 <strong>SESC</strong> <span>Kit de Eventos</span></a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cronograma.html">Cronograma</a></li>
+          <li><a href="palestrantes.html">Palestrantes</a></li>
+          <li><a href="local-mapa.html">Local</a></li>
+          <li><a href="patrocinadores.html" class="ativo">Patrocinadores</a></li>
+          <li><a href="inscricoes.html" class="btn-inscricao">Inscreva-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <h1>Fecomércio 2026</h1>
-    <p>Página: patrocinadores</p>
+    <div class="page-header">
+      <div class="container">
+        <div class="page-breadcrumb"><a href="index.html">Início</a> <span>/</span> Patrocinadores</div>
+        <h1>🤝 Patrocinadores</h1>
+        <p>Empresas e instituições que tornam o Fecomércio 2026 possível.</p>
+      </div>
+    </div>
+
+    <section class="secao">
+      <div class="container">
+        <div class="categoria-titulo">Patrocinador Master</div>
+        <div class="patrocinador-grid" style="margin-bottom:var(--espaco-xl)">
+          <div class="patrocinador-logo master">SESC Nacional</div>
+          <div class="patrocinador-logo master">Fecomércio SP</div>
+        </div>
+
+        <div class="categoria-titulo">Patrocinador Diamante</div>
+        <div class="patrocinador-grid" style="margin-bottom:var(--espaco-xl)">
+          <div class="patrocinador-logo">Banco do Brasil</div>
+          <div class="patrocinador-logo">TOTVS</div>
+          <div class="patrocinador-logo">Magazine Luiza</div>
+        </div>
+
+        <div class="categoria-titulo">Patrocinador Ouro</div>
+        <div class="patrocinador-grid" style="margin-bottom:var(--espaco-xl)">
+          <div class="patrocinador-logo">Sebrae</div>
+          <div class="patrocinador-logo">RD Station</div>
+          <div class="patrocinador-logo">Via Varejo</div>
+          <div class="patrocinador-logo">Correios</div>
+        </div>
+
+        <div class="categoria-titulo">Apoio</div>
+        <div class="patrocinador-grid" style="margin-bottom:var(--espaco-xl)">
+          <div class="patrocinador-logo" style="min-width:120px;height:70px;font-size:0.9rem">Prefeitura de SP</div>
+          <div class="patrocinador-logo" style="min-width:120px;height:70px;font-size:0.9rem">FGV</div>
+          <div class="patrocinador-logo" style="min-width:120px;height:70px;font-size:0.9rem">HSM Management</div>
+          <div class="patrocinador-logo" style="min-width:120px;height:70px;font-size:0.9rem">CNC</div>
+          <div class="patrocinador-logo" style="min-width:120px;height:70px;font-size:0.9rem">ACSP</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao-fundo-claro">
+      <div class="container text-center">
+        <h2 class="titulo-secao">Seja um patrocinador</h2>
+        <p class="subtitulo-secao" style="margin:0 auto var(--espaco-xl)">
+          Posicione sua marca perante mais de 500 líderes do comércio e serviços. Entre em contato para conhecer os pacotes disponíveis.
+        </p>
+        <a href="mailto:patrocinio@sesc.com.br" class="btn btn-primario btn-grande">Solicitar proposta de patrocínio</a>
+      </div>
+    </section>
   </main>
-  <script src="../scripts/app.js"></script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 SESC — Fecomércio. Todos os direitos reservados.</span>
+        <a href="index.html" style="color:rgba(255,255,255,0.6)">← Voltar ao início</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/config.js"></script>
 </body>
 </html>
