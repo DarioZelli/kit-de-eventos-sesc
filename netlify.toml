@@ -1,0 +1,8 @@
+[build]
+  base    = "evento-fecomercio-2026"
+  publish = "src/pages"
+
+[[redirects]]
+  from = "/"
+  to   = "/pages/index.html"
+  status = 200
